@@ -1,0 +1,21 @@
+# Clés privées (ne jamais versionner)
+*.key
+*.pem
+
+# Fichiers de mots de passe (ne jamais versionner en production)
+# Décommentez la ligne suivante en production :
+# mosquitto/config/passwd
+
+# Sérials OpenSSL
+*.srl
+
+# Données persistantes Docker
+mosquitto/data/
+
+# Logs
+mosquitto/log/*.log
+*.log
+
+# Fichiers temporaires
+*.csr
+*.tmp
