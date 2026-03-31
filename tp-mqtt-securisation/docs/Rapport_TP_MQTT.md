@@ -1,6 +1,6 @@
 # Rapport de TP : Sécurisation MQTT pour l'IoT
 
-**Auteur :** Étudiant(e)
+**Etudiant :** Aly DARWISH
 **Date :** 30 Mars 2026
 **Sujet :** Installation, Configuration et Sécurisation MQTT sur Ubuntu
 
