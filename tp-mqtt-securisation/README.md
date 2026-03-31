@@ -1,6 +1,6 @@
 # TP Sécurisation MQTT pour l'IoT
 
-**Cours :** IPSSI MSC Cybersécurité - Sécurisation IoT
+**Cours :** IPSSI MSC 26.3 Cybersécurité - Sécurisation IoT
 **Etudiant :** Aly DARWISH
 **Date :** 30 Mars 2026
 
