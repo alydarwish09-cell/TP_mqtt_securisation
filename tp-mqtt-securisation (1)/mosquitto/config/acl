@@ -1,0 +1,22 @@
+# ACL pour le TP de sécurisation MQTT
+
+# Par défaut, refuser l'accès aux topics système $SYS
+topic deny $SYS/#
+
+# Utilisateur admin: accès complet à tout
+user admin
+topic readwrite #
+topic readwrite $SYS/#
+
+# Utilisateur user1 (utilisateur de test général)
+user user1
+topic readwrite test/#
+topic read maison/temperature
+
+# Capteur 1 (sensor_node_1): ne peut écrire et lire que sur son propre topic
+user sensor_node_1
+topic readwrite home/sensor1/#
+
+# Tableau de bord (dashboard): lecture seule sur tous les topics home
+user dashboard
+topic read home/#

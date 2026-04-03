@@ -1,0 +1,9 @@
+
+=== TEST ANONYME ===
+Error: Connection refused
+
+=== TEST AUTHENTIFIE ===
+Error: Connection refused
+
+=== TEST MAUVAIS MDP ===
+Error: Connection refused

@@ -1,0 +1,31 @@
+======================================================
+  Tests de Sécurité MQTT - TP IoT IPSSI
+======================================================
+
+[TEST 1] Connexion anonyme (doit échouer - accès refusé)
+Error: Connection refused
+RÉSULTAT: SUCCÈS (connexion refusée comme attendu)
+
+[TEST 2] Connexion avec authentification valide (user1)
+Error: Connection refused
+RÉSULTAT: ÉCHEC (vérifier le broker)
+
+[TEST 3] Connexion avec mauvais mot de passe (doit échouer)
+Error: Connection refused
+RÉSULTAT: SUCCÈS (connexion refusée comme attendu)
+
+[TEST 4] Connexion sécurisée TLS sur port 8883
+Error: Connection refused
+RÉSULTAT: ÉCHEC (vérifier les certificats et le broker)
+
+[TEST 5] Violation ACL - sensor_node_1 tente de publier sur home/sensor2 (doit échouer)
+Error: Connection refused
+RÉSULTAT: CONNEXION REFUSÉE
+
+[TEST 6] Connexion mTLS avec certificat client
+Error: Connection refused
+RÉSULTAT: ÉCHEC (vérifier la configuration require_certificate)
+
+======================================================
+  Fin des tests
+======================================================

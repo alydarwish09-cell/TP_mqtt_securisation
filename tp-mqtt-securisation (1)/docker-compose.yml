@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  mqtt-broker:
+    image: eclipse-mosquitto:2.0
+    container_name: mosquitto-secure
+    ports:
+      - "1883:1883"  # Port MQTT standard (non chiffré)
+      - "8883:8883"  # Port MQTT sécurisé TLS
+      - "9001:9001"  # Port WebSockets (si configuré)
+    volumes:
+      - ./mosquitto/config/mosquitto.conf:/mosquitto/config/mosquitto.conf:ro
+      - ./mosquitto/config/passwd:/mosquitto/config/passwd:ro
+      - ./mosquitto/config/acl:/mosquitto/config/acl:ro
+      - ./mosquitto/certs:/mosquitto/certs:ro
+      - mosquitto_data:/mosquitto/data
+      - ./mosquitto/log:/mosquitto/log
+    restart: always
+
+volumes:
+  mosquitto_data:
